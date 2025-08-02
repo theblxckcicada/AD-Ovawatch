@@ -1,13 +1,7 @@
-# Overwatch-AD
+# Active Directory(AD)-Ovawatch
 ## Description
 The tool allows users to authenticate with a target domain using either usernames and passwords or NTLM hashes, and it provides a wide range of enumeration options to gather information about domain users, services, and vulnerabilities. It can also assist with cracking password hashes and extracting sensitive information for further exploitation.
 
-## Installation and Setup
-To set up Impacket and use the tool, you'll need to run the following command. Note: If you have set up your Kali using Dewalt's pimpmykali (https://github.com/Dewalt-arch/pimpmykali), you don't need to run the setup script.
-
-```markdown
-sudo python3 overwatch-ad.py --setup
- ```
 
 ![image](https://github.com/user-attachments/assets/e703cf85-bf49-4fbd-be40-ba9dedbe30d2)
 
@@ -17,7 +11,7 @@ https://github.com/theblxckcicada/Overwatch-AD/assets/68484817/77d0adb5-2223-4ae
 
 ```markdown
 ## Help Menu
-usage: overwatch-ad.py [-h] [-u USERNAME] [-d DOMAIN] [-p PASSWORD] [-H NTLM_HASH] [-t TARGET] [-w WORDLIST]
+usage: ad-ovawatch.py [-h] [-u USERNAME] [-d DOMAIN] [-p PASSWORD] [-H NTLM_HASH] [-t TARGET] [-w WORDLIST]
                       [-us USERSFILE] [--kerberos] [--lookupsid] [--npusers] [--userspn] [--ldap]
                       [--smb] [--full] [--winrm] [--bloodhound] [--crack]
 
@@ -34,9 +28,9 @@ optional arguments:
   -H NTLM_HASH, --ntlm-hash NTLM_HASH
                         NTLM Hash for authentication
   -t TARGET, --target TARGET
-                        Target host or IP address
+                        Target host or IP address (e.g 192.168.0.1 or 192.168.0.0/24 )
   -w WORDLIST, --wordlist WORDLIST
-                        Password list (default: rockyou.txt)
+                        Password list
   --setup               Fix Impacket scripts
   -us USERSFILE, --usersfile USERSFILE
                         List of domain users
